@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form_home_wallpaper" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.home.wallpaper</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@name='performance']" position="after">
+                <block title="Home Screen Wallpaper" name="sm_home_wallpaper">
+                    <setting string="Background Images"
+                             help="Upload images to use as random home screen wallpapers. A random image is displayed each time you visit the home screen.">
+                        <field name="sm_wallpaper_ids" widget="many2many_binary"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
