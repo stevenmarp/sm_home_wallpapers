@@ -4,7 +4,7 @@ import { useService } from "@web/core/utils/hooks";
 import { onWillStart } from "@odoo/owl";
 import { HomeMenu } from "@web_enterprise/webclient/home_menu/home_menu";
 
-patch(HomeMenu.prototype, {
+patch(HomeMenu.prototype, "sm_home_wallpaper", {
     setup() {
         super.setup(...arguments);
         this.orm = useService("orm");
